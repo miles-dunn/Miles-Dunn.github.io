@@ -1,11 +1,75 @@
-<html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Portfolio</title>
+  <meta name="description" content="Personal website with projects and links." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
 <body>
+  <header class="header">
+    <div class="container header-inner">
+      <div>
+        <h1>Your Name</h1>
+        <p class="subtitle">Student • Developer • Interests (e.g., AI, Security, Full-Stack)</p>
+      </div>
 
-<h1>Hi! This is my homepage for all things coding! Welcome</h1>
-<h2>About Me:</h2>
+      <nav class="links">
+        <a class="btn" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="mailto:you@example.com">Email</a>
+      </nav>
+    </div>
+  </header>
 
-</body>
-</html>
+  <main class="container">
+    <section class="card">
+      <h2>About</h2>
+      <p>
+        Hi! I’m <strong>Your Name</strong>. I’m a <em>your major/year</em> interested in
+        <em>your areas</em>. I like building practical projects, learning fast, and shipping.
+      </p>
+      <p class="muted">
+        Based in: Your City • Open to: Internships / Freelance / Collaboration
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2>Projects</h2>
+        <p class="muted">A few things I’ve built (click to view)</p>
+      </div>
+
+      <div class="grid">
+        <a class="project" href="https://github.com/YOUR_GITHUB/PROJECT_REPO_1" target="_blank" rel="noreferrer">
+          <h3>Project Name 1</h3>
+          <p>1–2 lines on what it does and the tech used.</p>
+          <span class="tag">Tech: React • Node • API</span>
+        </a>
+
+        <a class="project" href="https://github.com/YOUR_GITHUB/PROJECT_REPO_2" target="_blank" rel="noreferrer">
+          <h3>Project Name 2</h3>
+          <p>1–2 lines on what it does and why it’s cool.</p>
+          <span class="tag">Tech: Python • FastAPI</span>
+        </a>
+
+        <a class="project" href="https://YOUR_LIVE_DEMO_LINK" target="_blank" rel="noreferrer">
+          <h3>Project Name 3</h3>
+          <p>Optional live demo link or another repo link.</p>
+          <span class="tag">Tech: Flutter</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>More Links</h2>
+      <ul class="list">
+        <li><a href="https://github.com/YOUR_GITHUB?tab=repositories" target="_blank" rel="noreferrer">All Projects / Repos</a></li>
+        <li><a href="YOUR_RESUME_LINK.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
