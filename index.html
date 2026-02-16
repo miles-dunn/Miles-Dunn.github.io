@@ -3,73 +3,244 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
-  <meta name="description" content="Personal website with projects and links." />
+  <title>Miles Dunn | Portfolio</title>
+  <meta name="description" content="Miles Dunn — CS + Math student. Projects, skills, and links." />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <div>
-        <h1>Your Name</h1>
-        <p class="subtitle">Student • Developer • Interests (e.g., AI, Security, Full-Stack)</p>
-      </div>
+  <!-- Ambient background -->
+  <div class="bg">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="noise"></div>
+  </div>
 
-      <nav class="links">
-        <a class="btn" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn" href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn" href="mailto:you@example.com">Email</a>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top">MD</a>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
       </nav>
+
+      <div class="top-actions">
+        <a class="chip" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noreferrer">Project Repo</a>
+        <a class="chip" href="https://www.linkedin.com/in/milesdunn-umn/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="card">
-      <h2>About</h2>
-      <p>
-        Hi! I’m <strong>Your Name</strong>. I’m a <em>your major/year</em> interested in
-        <em>your areas</em>. I like building practical projects, learning fast, and shipping.
-      </p>
-      <p class="muted">
-        Based in: Your City • Open to: Internships / Freelance / Collaboration
-      </p>
+  <main id="top" class="container">
+    <!-- HERO -->
+    <section class="hero reveal">
+      <div class="hero-left">
+        <div class="kicker">CS + Math @ University of Minnesota • May 2027</div>
+        <h1>
+          Miles Dunn<br />
+          <span class="accent">Builds clean software</span> and practical AI projects.
+        </h1>
+
+        <p class="subtitle">
+          <span id="typed"></span><span class="cursor">▍</span>
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="assets/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <button class="btn ghost" id="copyEmail" type="button" data-email="dunn.miles.2004@gmail.com">
+            Copy Email
+          </button>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num">3.76</div>
+            <div class="stat-label">GPA</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">Full-Stack</div>
+            <div class="stat-label">FastAPI • Flutter • JS</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">AI</div>
+            <div class="stat-label">LLM APIs • JSON • Guardrails</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="portrait-card">
+          <img class="portrait" src="headshot.jpg" alt="Headshot of Miles Dunn" />
+          <div class="portrait-meta">
+            <div class="dot"></div>
+            <span>Minneapolis, MN</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <div class="section-title">
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+      <div class="section-head">
+        <h2>About</h2>
+        <p>
+          I’m a CS + Math student focused on building reliable software with strong engineering habits.
+          I like backend systems, AI integration, and clean UX.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="panel">
+          <h3>Highlights</h3>
+          <ul class="bullets">
+            <li>Built full-stack apps (FastAPI, Flutter, Node/React, SQLite)</li>
+            <li>Strong interest in cybersecurity + defensive engineering</li>
+            <li>Dean’s List (multiple semesters)</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Currently</h3>
+          <ul class="bullets">
+            <li>Improving my portfolio projects + shipping polished demos</li>
+            <li>Learning more about LLM evaluation + secure AI workflows</li>
+            <li>Open to internships and collaboration</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section reveal">
+      <div class="section-head">
         <h2>Projects</h2>
-        <p class="muted">A few things I’ve built (click to view)</p>
+        <p>Selected work — hover to explore.</p>
       </div>
 
-      <div class="grid">
-        <a class="project" href="https://github.com/YOUR_GITHUB/PROJECT_REPO_1" target="_blank" rel="noreferrer">
-          <h3>Project Name 1</h3>
-          <p>1–2 lines on what it does and the tech used.</p>
-          <span class="tag">Tech: React • Node • API</span>
+      <div class="cards">
+        <article class="card">
+          <div class="card-top">
+            <h3>Amend AI</h3>
+            <span class="badge">MinneHack 2026</span>
+          </div>
+          <p>
+            Grammarly-style tone correction + rewrite suggestions for de-escalating texts.
+            Structured JSON outputs, guardrails, and SQLite logging.
+          </p>
+          <div class="tags">
+            <span>FastAPI</span><span>Python</span><span>Flutter</span><span>SQLite</span><span>LLM API</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noreferrer">Repo</a>
+            <a href="#" target="_blank" rel="noreferrer">Demo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Exercise Split Selector</h3>
+            <span class="badge">Web App</span>
+          </div>
+          <p>
+            Generates workout programs from goals, schedule, and time constraints, then improves suboptimal inputs.
+          </p>
+          <div class="tags">
+            <span>JavaScript</span><span>HTML</span><span>CSS</span><span>Logic</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/YOUR-USERNAME/YOUR-REPO" target="_blank" rel="noreferrer">Repo</a>
+            <a href="#" target="_blank" rel="noreferrer">Live</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <h3>Camera Testing Automation</h3>
+            <span class="badge">Intern Project</span>
+          </div>
+          <p>
+            Automated QA workflows for 1,000+ security cameras and added SMS-triggered remote testing.
+          </p>
+          <div class="tags">
+            <span>Node.js</span><span>React</span><span>APIs</span><span>Automation</span>
+          </div>
+          <div class="card-actions">
+            <a href="#" target="_blank" rel="noreferrer">Details</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section reveal">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p>A quick snapshot of what I use.</p>
+      </div>
+
+      <div class="skills">
+        <div class="skill-block">
+          <h3>Languages</h3>
+          <div class="pills">
+            <span>Python</span><span>JavaScript</span><span>Java</span><span>C/C++</span><span>HTML/CSS</span><span>SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h3>Frameworks & Tools</h3>
+          <div class="pills">
+            <span>FastAPI</span><span>Flutter</span><span>React</span><span>Node.js</span><span>Docker</span><span>Git</span><span>SQLite</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h3>AI / Security</h3>
+          <div class="pills">
+            <span>LLM APIs</span><span>Prompting</span><span>Structured JSON</span><span>Guardrails</span><span>Threat Modeling</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Best way to reach me: email. Links below.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-tile" href="mailto:dunn.miles.2004@gmail.com">
+          <div class="tile-title">Email</div>
+          <div class="tile-sub">dunn.miles.2004@gmail.com</div>
+        </a>
+        <a class="contact-tile" href="https://github.umn.edu/dunn0602" target="_blank" rel="noreferrer">
+          <div class="tile-title">School GitHub</div>
+          <div class="tile-sub">@dunn0602</div>
         </a>
 
-        <a class="project" href="https://github.com/YOUR_GITHUB/PROJECT_REPO_2" target="_blank" rel="noreferrer">
-          <h3>Project Name 2</h3>
-          <p>1–2 lines on what it does and why it’s cool.</p>
-          <span class="tag">Tech: Python • FastAPI</span>
+        <a class="contact-tile" href="https://www.linkedin.com/in/milesdunn-umn/" target="_blank" rel="noreferrer">
+          <div class="tile-title">LinkedIn</div>
+          <div class="tile-sub">/in/milesdunn-umn</div>
         </a>
 
-        <a class="project" href="https://YOUR_LIVE_DEMO_LINK" target="_blank" rel="noreferrer">
-          <h3>Project Name 3</h3>
-          <p>Optional live demo link or another repo link.</p>
-          <span class="tag">Tech: Flutter</span>
+        <a class="contact-tile" href="https://github.com/miles-dunn" target="_blank" rel="noreferrer">
+          <div class="tile-title">Personal GitHub</div>
+         <div class="tile-sub">@dunn0602</div>
         </a>
       </div>
     </section>
 
-    <section class="card">
-      <h2>More Links</h2>
-      <ul class="list">
-        <li><a href="https://github.com/YOUR_GITHUB?tab=repositories" target="_blank" rel="noreferrer">All Projects / Repos</a></li>
-        <li><a href="YOUR_RESUME_LINK.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a></li>
-      </ul>
-    </section>
+    <footer class="footer">
+      <p>© <span id="year"></span> Miles Dunn • Built for GitHub Pages</p>
+    </footer>
   </main>
 
-  <footer class="footer">
+  <script src="script.js"></script>
+</body>
+</html>
