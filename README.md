@@ -14,8 +14,8 @@ I build practical software with strong engineering habits and a focus on reliabi
 - Interested in AI systems, backend engineering, and security-focused development
 - Open to internships and collaboration
 
-Portfolio Website → https://YOURUSERNAME.github.io  
-LinkedIn → https://linkedin.com/in/YOUR-LINK  
+Portfolio Website → https://miles-dunn.github.io/  
+LinkedIn → https://www.linkedin.com/in/milesdunn-umn/ 
 Email → dunn.miles.2004@gmail.com  
 
 ---
@@ -31,7 +31,7 @@ Grammarly-style tone correction system that rewrites hostile messages into respe
 - Flutter frontend
 - LLM integration with safety guardrails
 
-Repo → https://github.com/YOUR-USERNAME/YOUR-REPO  
+Repo → https://github.umn.edu/Herzi071/Minnehack-Submission 
 
 ---
 
@@ -43,7 +43,7 @@ Algorithmic workout program generator based on user goals and schedule.
 - HTML/CSS
 - Input optimization logic
 
-Repo → https://github.com/YOUR-USERNAME/YOUR-REPO  
+Repo → https://github.com/miles-dunn/exercise-split-selector-app  
 
 ---
 
