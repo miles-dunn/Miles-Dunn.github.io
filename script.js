@@ -1,39 +1,42 @@
 document.documentElement.classList.add("js");
+
 const typedEl = document.getElementById("typed");
 const lines = [
-  "FastAPI • Flutter • Node.js • React",
-  "LLM integrations with structured JSON + guardrails",
-  "Cybersecurity-minded, product-focused engineering"
+  "I enjoy projects that start with a real problem.",
+  "I care about clear systems, good UX, and practical AI.",
+  "I like software that earns trust by being simple and useful."
 ];
 
-let lineIndex = 0;
-let charIndex = 0;
-let deleting = false;
+if (typedEl) {
+  let lineIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
 
-function tick() {
-  const current = lines[lineIndex];
+  function tick() {
+    const current = lines[lineIndex];
 
-  if (!deleting) {
-    charIndex++;
-    typedEl.textContent = current.slice(0, charIndex);
-    if (charIndex === current.length) {
-      deleting = true;
-      setTimeout(tick, 1100);
-      return;
+    if (!deleting) {
+      charIndex++;
+      typedEl.textContent = current.slice(0, charIndex);
+      if (charIndex === current.length) {
+        deleting = true;
+        setTimeout(tick, 1200);
+        return;
+      }
+    } else {
+      charIndex--;
+      typedEl.textContent = current.slice(0, charIndex);
+      if (charIndex === 0) {
+        deleting = false;
+        lineIndex = (lineIndex + 1) % lines.length;
+      }
     }
-  } else {
-    charIndex--;
-    typedEl.textContent = current.slice(0, charIndex);
-    if (charIndex === 0) {
-      deleting = false;
-      lineIndex = (lineIndex + 1) % lines.length;
-    }
+
+    setTimeout(tick, deleting ? 26 : 20);
   }
 
-  const speed = deleting ? 28 : 22;
-  setTimeout(tick, speed);
+  tick();
 }
-tick();
 
 const copyBtn = document.getElementById("copyEmail");
 if (copyBtn) {
@@ -51,9 +54,18 @@ if (copyBtn) {
 }
 
 const reveals = document.querySelectorAll(".reveal");
-const io = new IntersectionObserver((entries) => {
-  for (const e of entries) if (e.isIntersecting) e.target.classList.add("show");
-}, { threshold: 0.12 });
+const io = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) entry.target.classList.add("show");
+    }
+  },
+  { threshold: 0.12 }
+);
 
 reveals.forEach((el) => io.observe(el));
-document.getElementById("year").textContent = new Date().getFullYear();
+
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
