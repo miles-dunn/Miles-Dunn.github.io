@@ -7,36 +7,36 @@ const lines = [
   "I like software that earns trust by being simple and useful."
 ];
 
-if (typedEl) {
-  let lineIndex = 0;
-  let charIndex = 0;
-  let deleting = false;
+// if (typedEl) {
+//   let lineIndex = 0;
+//   let charIndex = 0;
+//   let deleting = false;
 
-  function tick() {
-    const current = lines[lineIndex];
+//   // function tick() {
+//   //   const current = lines[lineIndex];
 
-    if (!deleting) {
-      charIndex++;
-      typedEl.textContent = current.slice(0, charIndex);
-      if (charIndex === current.length) {
-        deleting = true;
-        setTimeout(tick, 1200);
-        return;
-      }
-    } else {
-      charIndex--;
-      typedEl.textContent = current.slice(0, charIndex);
-      if (charIndex === 0) {
-        deleting = false;
-        lineIndex = (lineIndex + 1) % lines.length;
-      }
-    }
+//   //   if (!deleting) {
+//   //     charIndex++;
+//   //     typedEl.textContent = current.slice(0, charIndex);
+//   //     if (charIndex === current.length) {
+//   //       deleting = true;
+//   //       setTimeout(tick, 1200);
+//   //       return;
+//   //     }
+//   //   } else {
+//   //     charIndex--;
+//   //     typedEl.textContent = current.slice(0, charIndex);
+//   //     if (charIndex === 0) {
+//   //       deleting = false;
+//   //       lineIndex = (lineIndex + 1) % lines.length;
+//   //     }
+//   //   }
 
-    setTimeout(tick, deleting ? 26 : 20);
-  }
+//   //   setTimeout(tick, deleting ? 26 : 20);
+//   // }
 
-  tick();
-}
+//   tick();
+// }
 
 const copyBtn = document.getElementById("copyEmail");
 if (copyBtn) {

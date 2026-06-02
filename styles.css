@@ -82,13 +82,13 @@ a{color:inherit}
   place-items:center;
   width:36px; height:36px;
   border-radius:10px;
-  color:var(--muted);
+  color: #7A0019;
   text-decoration:none;
   transition: color .2s ease, background .2s ease;
 }
 .social-icon:hover{
-  color:var(--text);
-  background: rgba(255,255,255,.06);
+  color: #7A0019;
+  background: rgba(255,204,51,.20);
 }
 .brand{
   width:40px; height:40px;
@@ -111,7 +111,6 @@ a{color:inherit}
   width:22px; height:22px;
   object-fit:contain;
   display:block;
-  filter: grayscale(100%) brightness(1.8);
   border-radius:3px;
 }
 .nav{
@@ -120,15 +119,15 @@ a{color:inherit}
   flex-wrap:wrap;
 }
 .nav a{
-  color:var(--muted);
+  color: #7A0019;
   text-decoration:none;
   padding:8px 10px;
   border-radius:10px;
   transition: background .2s ease, color .2s ease;
 }
 .nav a:hover{
-  color:var(--text);
-  background: rgba(255,255,255,.06);
+  color: #7A0019;
+  background: rgba(255,204,51,.20);
 }
 
 .hero{
